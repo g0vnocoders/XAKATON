@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta name="viewport" content="width=width-device, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Розклад занять</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">НАУ</a>
+        <div class="toggle"></div>
+        <ul>
+            <li><a href="#">Додому</a></li>
+            <li><a href="#">Абірітурієнту</a></li>
+            <li><a href="#">Студенту</a></li>
+            <li><a href="#">Зв'язок з нами</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="textBox">
+            <h2>Нау - твоя мрія!<br><span>Розклад занять</span></h2>
+            <h3>Команда dzuba-ops</h3>
+            <a href="#" class="btn">Подивитися розклад</a>
+        </div>
+
+    </section>
+    <section class="aboutUs">
+        <div class="heading">
+            <h2>Розклад</h2>
+        </div>
+        <div class="content">
+            <div class="contentBox w50">
+                <h3>Розклад занять</h3>
+                <p>Увага! з 01.02.2021 року студенти всіх курсів денної форми навчання
+                    навчаються в першу зміну в умовах змішаного навчання.
+                    Розклад занять може змінюватись,
+                    звіряйте, будь ласка, з розкладом опублікованим на факультетах</p>
+            </div>
+            <div class="w50">
+                <img src="img/nau_rozklad.jpg" class="img">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="serviceForStudent">
+        <div class="heading white">
+            <h2>Факультети</h2>
+            <p>Тут Денне відділення і Заочне відділення</p>
+        </div>
+        <div class="content">
+            <div class="serviceForStudentBox">
+                <img src="img/economic.png">
+                <h2>Факультет економіки та менеджменту</h2>
+                <p>підготовка конкурентоспроможних фахівців з готовністю
+                    до інноваційної професійної діяльності, 
+                    які  здатні ефективно працювати в умовах ринкової економіки,
+                    управляти функціональними,
+                    організаційними і соціально-трудовими процесами на підприємствах різних форм власності та вирішувати завдання з розвитку української держави.</p>
+            </div>
+            <div class="serviceForStudentBox">
+                <img src="img/worldwide.png">
+                <h2>Факультет інформаційних систем та технологій</h2>
+                <p>Дана спеціальність забезпечує здатність майбутніх фахівців
+                   працювати з сучасними системами інформаційного
+                   і технічного забезпечення
+                   у галузі інформаційної,
+                   бібліотечної та архівної справи;
+                   розробляти управлінські документи згідно з чинними стандартами;
+                   організовувати роботу з документами в установах, організаціях, на підприємствах;
+                   проводити експертизу наукової та практичної цінності документної інформації, призначеної для сфери управління; впроваджувати прогресивні системи інформаційного забезпечення процесу управління.</p>
+            </div>
+            <div class="serviceForStudentBox">
+                <img src="img/auction.png">
+                <h2>Юридичний факультет</h2>
+                <p> Потужна фундаментальна та грунтовна практична пiдготовка,
+                    поглиблене вивчення iноземних мов,
+                    стажування в юридичних вiддiлах пiдприємств,
+                    органiзацiй та установ забезпечує можливiсть випускникам iнституту працювати в будь-якiй сферi економiчної дiяльностi.</p>
+            </div>
+            <div class="serviceForStudentBox">
+                <img src="img/code.png">
+                <h2>Комп'ютерні науки</h2>
+                <p>Комп'ютерні науки - це дослідження того,
+                    як працюють інформаційні технології з точки зору теоретичної та математичної перспективи, з точки зору забезпечення наукового обгрунтування процесів розгортання,
+                    інтеграції та взаємодії інформаційних технологій</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contactUs">
+        <div class="heading white">
+            <h2>Зв'язок з нами</h2>
+            <p>Щодо запитать писати сюди</p>
+        </div>
+        <div class="content">
+            <div class="contactInfo">
+                <h3>Контакта інформація</h3>
+                <div class="contactInfoBox">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function() {
+            let header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+
+</body>
+
+</html>
