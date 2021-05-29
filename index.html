@@ -1,120 +1,293 @@
-<!DOCTYPE html>
-<html lang="ua">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=width-device, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Розклад занять</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Dashboard Template · Bootstrap v5.0</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.130rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <link href="index.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">НАУ</a>
-        <div class="toggle"></div>
-        <ul>
-            <li><a href="#">Додому</a></li>
-            <li><a href="#">Абірітурієнту</a></li>
-            <li><a href="#">Студенту</a></li>
-            <li><a href="#">Зв'язок з нами</a></li>
-        </ul>
-    </header>
-    <section class="banner">
-        <div class="textBox">
-            <h2>Нау - твоя мрія!<br><span>Розклад занять</span></h2>
-            <h3>Команда dzuba-ops</h3>
-            <a href="#" class="btn">Подивитися розклад</a>
-        </div>
-
-    </section>
-    <section class="aboutUs">
-        <div class="heading">
-            <h2>Розклад</h2>
-        </div>
-        <div class="content">
-            <div class="contentBox w50">
-                <h3>Розклад занять</h3>
-                <p>Увага! з 01.02.2021 року студенти всіх курсів денної форми навчання
-                    навчаються в першу зміну в умовах змішаного навчання.
-                    Розклад занять може змінюватись,
-                    звіряйте, будь ласка, з розкладом опублікованим на факультетах</p>
-            </div>
-            <div class="w50">
-                <img src="img/nau_rozklad.jpg" class="img">
-            </div>
-        </div>
-    </section>
 
 
-    <section class="serviceForStudent">
-        <div class="heading white">
-            <h2>Факультети</h2>
-            <p>Тут Денне відділення і Заочне відділення</p>
-        </div>
-        <div class="content">
-            <div class="serviceForStudentBox">
-                <img src="img/economic.png">
-                <h2>Факультет економіки та менеджменту</h2>
-                <p>підготовка конкурентоспроможних фахівців з готовністю
-                    до інноваційної професійної діяльності, 
-                    які  здатні ефективно працювати в умовах ринкової економіки,
-                    управляти функціональними,
-                    організаційними і соціально-трудовими процесами на підприємствах різних форм власності та вирішувати завдання з розвитку української держави.</p>
-            </div>
-            <div class="serviceForStudentBox">
-                <img src="img/worldwide.png">
-                <h2>Факультет інформаційних систем та технологій</h2>
-                <p>Дана спеціальність забезпечує здатність майбутніх фахівців
-                   працювати з сучасними системами інформаційного
-                   і технічного забезпечення
-                   у галузі інформаційної,
-                   бібліотечної та архівної справи;
-                   розробляти управлінські документи згідно з чинними стандартами;
-                   організовувати роботу з документами в установах, організаціях, на підприємствах;
-                   проводити експертизу наукової та практичної цінності документної інформації, призначеної для сфери управління; впроваджувати прогресивні системи інформаційного забезпечення процесу управління.</p>
-            </div>
-            <div class="serviceForStudentBox">
-                <img src="img/auction.png">
-                <h2>Юридичний факультет</h2>
-                <p> Потужна фундаментальна та грунтовна практична пiдготовка,
-                    поглиблене вивчення iноземних мов,
-                    стажування в юридичних вiддiлах пiдприємств,
-                    органiзацiй та установ забезпечує можливiсть випускникам iнституту працювати в будь-якiй сферi економiчної дiяльностi.</p>
-            </div>
-            <div class="serviceForStudentBox">
-                <img src="img/code.png">
-                <h2>Комп'ютерні науки</h2>
-                <p>Комп'ютерні науки - це дослідження того,
-                    як працюють інформаційні технології з точки зору теоретичної та математичної перспективи, з точки зору забезпечення наукового обгрунтування процесів розгортання,
-                    інтеграції та взаємодії інформаційних технологій</p>
-            </div>
-        </div>
-    </section>
+    <script>
+        function easyXHR(url, data, done) {
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = "json";
+            xhr.open("GET", url, true);
+            xhr.setRequestHeader(
+                "content-type",
+                "application/x-www-form-urlencoded;charset=UTF-8"
+            );
+            xhr.onload = done;
+            xhr.send(data);
+        }
 
+        function getItems() {
+            easyXHR("/fakeitems/?skip=0&limit=100", null, (e) => { //никто больше ста на хакатоне не будет грузить в здравом уме
+                if (e.target.status == 200) {
+                    document.getElementsByTagName("tbody")[0].innerHTML = "";
+                    console.log(e.target.response);
+                    e.target.response.forEach(item => {
+                        document.getElementsByTagName("tbody")[0].innerHTML += `
+                        <tr>
+                            <td colspan="30">${item.title}</td>
+                            <td colspan="30">${item.owner_name}</td>
+                            <th colspan="30"></th>
+                            <td colspan="3">з ${item.start}</td>
+                            <td colspan="3">по ${item.end}</td>
+                            <td colspan="5"></td>
+                            <td colspan="10"><span>${parseDays(item.days)}</span></td>
+                        </tr>
+                        `
 
-    <section class="contactUs">
-        <div class="heading white">
-            <h2>Зв'язок з нами</h2>
-            <p>Щодо запитать писати сюди</p>
-        </div>
-        <div class="content">
-            <div class="contactInfo">
-                <h3>Контакта інформація</h3>
-                <div class="contactInfoBox">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    <script type="text/javascript">
-        window.addEventListener('scroll', function() {
-            let header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
+                    })
+                }
+            });
+        }
+        document.addEventListener("DOMContentLoaded", getItems);
+
+        const days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд"]
+
+        function parseDays(input) {
+            var ret = "";
+            if (input == 127) {
+                return "Щодня"
+            }
+            if (input == 31) {
+                return "Будні"
+            }
+            for (var i = 0; i < 7; i++) {
+                ret += (input >> i) & 1 ? days[i] + ", " : '';
+            }
+            if (ret[ret.length - 2] == ",") ret = ret.substr(0, ret.length - 2);
+            return ret
+        }
     </script>
 
+
+
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 40fr 1fr;">
+
+            <a class="navbar-brand logo font-size: 1.4rem !important;col-md-3 col-lg-2 me-0 px-3" style="background-color: rgba(0, 0, 0, 0);
+            box-shadow: none;" href="#"><b>НАУ</b>: Заняття</a>
+
+
+            <input class="form-control form-control-dark w-100" type="text" placeholder="Шукати" aria-label="Search">
+
+
+            <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link navbar-nav nav-item" href="#">Увійти</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+
+
+            <main class="ms-sm-auto px-md-10">
+                <h2>Розклад додаткових занять у НАУ</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr style="font-size: larger;">
+                                <th colspan="30">Заняття</th>
+                                <th colspan="30">Куратор</th>
+                                <th colspan="30"></th>
+                                <th colspan="6">Час занять</th>
+                                <th colspan="5"></th>
+                                <th colspan="10">Дні занять</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Ср, Пт, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Вт,Чт,Сб</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Чт, Пт</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+                            <tr>
+                                <td colspan="30">Курси Турбо Паскаль</td>
+                                <td colspan="30">Дзюба Артем Михайлович</td>
+                                <th colspan="30"></th>
+                                <td colspan="3">15:00</td>
+                                <td colspan="3">17:45</td>
+                                <th colspan="5"></th>
+                                <td colspan="10">Пн, Вт, Ср, Чт, Пт, Сб, Нд</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
 </body>
 
 </html>
