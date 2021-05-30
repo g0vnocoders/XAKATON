@@ -59,7 +59,7 @@
         }
 
         function getItems() {
-            easyXHR("/items/?skip=0&limit=100", null, (e) => { //никто больше ста на хакатоне не будет грузить в здравом уме
+            easyXHR("/fakeitems/?skip=0&limit=100", null, (e) => { //никто больше ста на хакатоне не будет грузить в здравом уме
                 if (e.target.status == 200) {
                     document.getElementsByTagName("tbody")[0].innerHTML = "";
                     console.log(e.target.response);
@@ -67,7 +67,7 @@
                         document.getElementsByTagName("tbody")[0].innerHTML += `
                         <tr>
                             <td colspan="30">${item.title}</td>
-                            <td colspan="30">${item.name}</td>
+                            <td colspan="30">${item.owner_name}</td>
                             <th colspan="30"></th>
                             <td colspan="3">з ${item.start}</td>
                             <td colspan="3">по ${item.end}</td>
@@ -127,7 +127,7 @@
 
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link navbar-nav nav-item" href="signin.html">Увійти</a>
+                    <a class="nav-link navbar-nav nav-item" href="landing.html">Додому</a>
                 </li>
             </ul>
         </div>

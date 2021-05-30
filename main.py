@@ -1,9 +1,10 @@
 from typing import List
 
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException,Response, Form
 from sqlalchemy.orm import Session
 import random
-from starlette.responses import FileResponse, RedirectResponse
+from sqlalchemy.sql.expression import true
+from starlette.responses import FileResponse, HTMLResponse, RedirectResponse
 
 from fastapi.staticfiles import StaticFiles
 import crud, models, schemas
@@ -24,7 +25,7 @@ def get_db():
 
 @app.get("/",response_class=RedirectResponse)
 async def mainpage():
-    return RedirectResponse("index.html")
+    return RedirectResponse("landing.html")
 
 
 @app.post("/users/", response_model=schemas.User)
@@ -49,11 +50,11 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
     return db_user
 
 
-@app.post("/users/{user_id}/items/", response_model=schemas.Item)
+@app.post("/users/{user_password}/items/", response_model=schemas.Item)
 def create_item_for_user(
-    user_email: str, item: schemas.ItemCreate, db: Session = Depends(get_db)
+    user_password: str, item: schemas.ItemCreate, db: Session = Depends(get_db)
 ):
-    return crud.create_user_item(db=db, item=item, user_email=user_email)
+    return crud.create_user_item(db=db, item=item, user_password=user_password)
 
 
 @app.get("/items/", response_model=List[schemas.Item])
@@ -61,16 +62,32 @@ def read_items(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     items = crud.get_items(db, skip=skip, limit=limit)
     return items
 
+@app.delete("/items/",)
+def delete_item(id:str, db: Session = Depends(get_db)):
+    items = crud.delete_item_by_id(db, id=id)
+    return True
+
+
+@app.post("/auth",response_class=HTMLResponse)
+def auth_user(password:str=Form(...)):
+    response=HTMLResponse("<script>window.location.href='/admin.html'</script>")
+    response.set_cookie(key="password", value=password)#НЕ РОБІТЬ ТАК НА ПРОДІ
+    return response                                    #ГЕНЕРУЙТЕ ТОКЕНИ ТА ПРИВʼЯЗУЙТЕ ЇХ
+
+
+
+
+#FAKE
 def getdate():
     return str(random.randint(10,19))+":"+str(random.choice(["00","05",10,15,20,25,30,35,40,45,50,55]))
 
 shit=[
     ["Кафедра","Курси","Факультет","Гурток","Секція"],
-    ["спорту","дзюби","конструювання","малювання","танців","моделювання","Англійської мови",
+    ["спорту","конструювання","малювання","танців","моделювання","Англійської мови",
     "Китайської мови","Програмування","Лайнокодингу","Медицини","Карате","Turbo Pascal"],
-    ["Павлов","Порошенко","Янукович","Лінус","Путін","Білл","Стів","Балашов","Дзюба","Черніков","Тимошенко",
-    "Лукашенко","Якубович","Гітлер","Шкарлет","Тимошенко"],
-    ["Артем","Олександр","Віктор","Торвальдс","Володимир","Гейтс","Джобс","Геннадій","Максим","Марк","Олег"],
+    ["Павлов","Порошенко","Янукович","Лінус","Путін","Білл","Стів","Балашов","Шалун","Дзюба","Черніков","Тимошенко",
+    "Лукашенко","Якубович","Гітлер","Шкарлет"],
+    ["Артем","Олександр","Віктор","Торвальдс","Володимир","Гейтс","Джобс","Геннадій","Максим","Марк","Олег","Ілля"],
     ["Артемович","Олександрович","Вікторович","Торвальдсович","Володимирович","Гейтсович","Джобсович",
     "Геннадієвич","Максимович","Маркович"]
 ]
@@ -85,12 +102,12 @@ def getname():
 def read_itemssus(skip: int = 0, limit: int = 100):
     topics=["1","2"]
     items=[]
-    items.append(schemas.Item(title=gettopic(),description="",start=getdate(),end=getdate(),days=127,id=123,owner_name=getname(),type="Integer"))
+    items.append(schemas.Item(title=gettopic(),description="",start=getdate(),end=getdate(),days=127,id=123,owner_name=getname(),name=getname(),type="Integer"))
     
-    items.append(schemas.Item(title=gettopic(),description="",start=getdate(),end=getdate(),days=31,id=123,owner_name=getname(),type="Integer"))
+    items.append(schemas.Item(title=gettopic(),description="",start=getdate(),end=getdate(),days=31,id=123,owner_name=getname(),name=getname(),type="Integer"))
     
     for days in reversed(range(2,128)):
-        items.append(schemas.Item(title=gettopic(),description="",start=getdate(),end=getdate(),days=days,id=123,owner_name=getname(),type="Integer"))
+        items.append(schemas.Item(title=gettopic(),description="",start=getdate(),end=getdate(),days=days,id=123,owner_name=getname(),name=getname(),type="Integer"))
     return items
 
 app.mount("/", StaticFiles(directory="."), name="static")    

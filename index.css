@@ -1,108 +1,146 @@
-    .btn {
-        height: 42px;
-        border: none;
-        background: #3a7999;
-        color: #f2f2f2;
-        padding: 10px;
-        font-size: 18px;
-        border-radius: 5px;
-        position: relative;
-        box-sizing: border-box;
-        transition: all 500ms ease;
-        width: 105px;
-    }
-    
-    .btn:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 42px;
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 5px;
-        transition: all 2s ease;
-    }
-    
-    .btn:hover:before {
-        width: 100%;
-    }
-    
-    @media only screen and (min-width: 700px) {
-        tr {
-            font-size: 1.3em !important;
-            /*К О М П Ы*/
-        }
-        td {
-            font-size: inherit !important;
-        }
-        th {
-            font-size: inherit !important;
-        }
-        h2 {
-            font-size: 2rem !important;
-        }
-        .logo {
-            font-size: 1.4rem !important;
-        }
-        .container-fluid {
-            padding-left: inherit !important;
-            padding-right: inherit !important;
-        }
-        header {
-            height: inherit;
-        }
-    }
-    
-    header {
-        height: 2.4rem;
-    }
-    
-    .logo {
-        font-size: .7rem;
-        padding: .1rem !important;
-    }
-    
+.btn {
+    height: 42px;
+    border: none;
+    background: #3a7999;
+    color: #f2f2f2;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    width: 105px;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    transition: all 2s ease;
+}
+
+.btn:hover:before {
+    width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
     tr {
-        font-size: 0.9em;
+        font-size: 1.3em !important;
+        /*К О М П Ы*/
     }
-    
-    .container-fluid {
-        overflow-x: hidden;
-    }
-    
-    .container-fluid {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    
-    h2 {
-        font-size: 1.3rem;
-    }
-    
-    th,
     td {
-        text-align: center;
-        font-size: .7rem;
+        font-size: inherit !important;
     }
-    
-    tr :nth-child(1) {
-        text-align: left;
+    th {
+        font-size: inherit !important;
     }
-    
-    th:nth-child(6) {
-        text-align: left;
-        padding-left: 6%;
+    h2 {
+        font-size: 2rem !important;
     }
-    
-    tr :nth-child(7) {
-        text-align: left;
-        padding-left: 6%;
+    .logo {
+        font-size: 1.4rem !important;
     }
-    
-    input:focus {
-        border-color: #777 !important;
-        background-color: #777 !important;
-        height: 80%;
-        color: #fff !important;
+    .container-fluid {
+        padding-right: var(--bs-gutter-x, .75rem) !important;
+        padding-left: var(--bs-gutter-x, .75rem) !important;
     }
+    header {
+        height: inherit;
+    }
+}
+
+header {
+    height: 2.4rem;
+}
+
+.logo {
+    font-size: .7rem;
+    padding: .1rem !important;
+}
+
+tr {
+    font-size: 0.9em;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+th,
+td {
+    text-align: center;
+    font-size: .7rem;
+}
+
+tr :nth-child(1) {
+    text-align: left;
+}
+
+th:nth-child(6) {
+    text-align: left;
+    padding-left: 6%;
+}
+
+tr :nth-child(7) {
+    text-align: left;
+    padding-left: 6%;
+}
+
+input:focus {
+    border-color: #777 !important;
+    background-color: #777 !important;
+    height: 80%;
+    color: #fff !important;
+}
+
+.fas.fa-trash-alt {
+    cursor: pointer;
+}
+
+.additem {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    cursor: pointer;
+    background-color: #777;
+    border-radius: 50%;
+}
+
+.bannerrr {
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    top: 0;
+    bottom: 0;
+    z-index: 100500;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white !important;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.form-floating {
+    color: black !important;
+}
+
+.daypicker * {
+    color: white !important;
+}
+
+.bug1 input:focus {
+    height: 100% !important;
+}

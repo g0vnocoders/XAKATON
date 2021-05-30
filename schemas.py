@@ -5,7 +5,9 @@ import time
 import types
 class ItemBase(BaseModel):
     title: str
+    name: str
     description: Optional[str] = None
+
     start: str# = Column(Time,nullable=False) чч:мм:сс
     end: str#= Column(Time,nullable=False)
     days: int#= Column(Integer,nullable=False) #1111111 days = 127
@@ -25,7 +27,7 @@ class Item(ItemBase):
 
 class UserBase(BaseModel):
     email: str
-
+    name: str
 
 class UserCreate(UserBase):
     password: str
